@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Política de Privacidade da extensão InstaGrowth IA uPaiva — o que coletamos, armazenamos e o que NÃO fazemos.">
+<meta name="robots" content="index, follow">
+<title>Política de Privacidade — InstaGrowth IA uPaiva</title>
+<link rel="canonical" href="">
+<style>
+  :root {
+    --bg-base: #080A12;
+    --bg-surface: #0D1020;
+    --bg-card: #12172A;
+    --bg-elevated: #171D33;
+    --border-subtle: #252B45;
+    --color-blue: #3B82F6;
+    --color-purple: #8B5CF6;
+    --color-green: #22C55E;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #64748B;
+    --gradient-primary: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 45%, #22C55E 100%);
+    --glow-purple: 0 0 24px rgba(139, 92, 246, 0.35);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    line-height: 1.65;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 12px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 40px 0 12px;
+    color: var(--text-primary);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  h3 {
+    font-size: 16px;
+    margin: 24px 0 8px;
+    color: var(--color-blue);
+  }
+  p { margin: 12px 0; color: var(--text-secondary); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; color: var(--text-secondary); }
+  strong { color: var(--text-primary); font-weight: 600; }
+  a { color: var(--color-purple); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    color: var(--text-primary);
+  }
+  .tldr {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(6, 182, 212, 0.08));
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0 40px;
+    box-shadow: var(--glow-purple);
+  }
+  .tldr h2 {
+    margin-top: 0;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-purple);
+  }
+  .tldr ul { margin: 8px 0 0; }
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 40px 0;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <span class="badge">InstaGrowth IA uPaiva</span>
+    <h1>Política de Privacidade</h1>
+    <p class="meta">Última atualização: <strong>16 de maio de 2026</strong></p>
+  </header>
+
+  <p>A extensão <strong>InstaGrowth IA uPaiva</strong> foi projetada com privacidade como prioridade. Este documento explica o que coletamos, o que armazenamos, o que enviamos para servidores externos e o que <strong>NÃO</strong> fazemos.</p>
+
+  <div class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li>Quase tudo fica no seu navegador (<code>chrome.storage.local</code>).</li>
+      <li>A extensão nunca pede sua senha do Instagram.</li>
+      <li>Sua chave de IA <strong>NUNCA</strong> é enviada para nossos servidores.</li>
+      <li>Apenas dados de pagamento PIX e a license key são enviados ao backend da uPaiva.</li>
+      <li>Você pode apagar todos os dados a qualquer momento em Configurações → "Limpar todos os dados".</li>
+    </ul>
+  </div>
+
+  <h2>O que a extensão coleta e armazena</h2>
+  <p>Tudo abaixo fica <strong>apenas no seu navegador</strong>, em <code>chrome.storage.local</code>. Nada é enviado para nossos servidores sem que esteja descrito na seção "Comunicação com servidores externos" abaixo.</p>
+
+  <h3>Dados de uso da extensão</h3>
+  <ul>
+    <li>Perfis capturados (username, nome, foto, bio, contagens, classificação heurística, origem da captura)</li>
+    <li>Histórico de quem você seguiu pela extensão (username, data, origem, status de retorno de follow)</li>
+    <li>Fila atual e fila pendente (perfis na fila de crescimento)</li>
+    <li>Configurações: limites, delays, preset escolhido</li>
+    <li>Nicho configurado (nicho, público-alvo, objetivo, tom, região)</li>
+    <li>Hashtags testadas</li>
+    <li>Histórico do Prompt Studio (últimos 50 prompts gerados)</li>
+    <li>Favoritos do Prompt Studio</li>
+    <li>Status do termo de aceite do Auto Pleno (versão + timestamp + device ID + hash do conteúdo)</li>
+  </ul>
+
+  <h3>Dados de Premium</h3>
+  <ul>
+    <li>Device ID aleatório (UUID gerado localmente para identificar este navegador)</li>
+    <li>E-mail usado na compra</li>
+    <li>License key (criptografada em trânsito)</li>
+    <li>Plano ativo e data de expiração</li>
+    <li>Features liberadas</li>
+    <li>Timestamp da última verificação</li>
+  </ul>
+
+  <h3>Chave de IA (BYOK)</h3>
+  <ul>
+    <li>Provedor escolhido (Claude / OpenAI / Gemini)</li>
+    <li>Chave de API do provedor — armazenada localmente com obfuscação XOR + base64 (não é criptografia forte; recomendamos restringir a chave por uso/IP no painel do provedor)</li>
+  </ul>
+
+  <h2>O que a extensão NÃO coleta</h2>
+  <ul>
+    <li><strong>Senha do Instagram</strong> — nunca pedimos.</li>
+    <li><strong>Mensagens diretas (DMs)</strong> — não acessamos.</li>
+    <li><strong>E-mail ou dados pessoais de outros perfis</strong> — apenas dados públicos.</li>
+    <li><strong>Histórico de navegação fora do instagram.com</strong> — a extensão só roda em <code>https://www.instagram.com/*</code>.</li>
+    <li><strong>Dados sensíveis</strong> (CPF, cartões, etc.) — apenas e-mail no fluxo de PIX.</li>
+  </ul>
+
+  <h2>Comunicação com servidores externos</h2>
+
+  <h3>1. Instagram (instagram.com)</h3>
+  <p>A extensão faz chamadas à API interna pública do Instagram, no contexto da sua sessão logada (com seus cookies). Especificamente:</p>
+  <ul>
+    <li><code>GET /api/v1/users/{id}/info/</code> — detecta seu username logado</li>
+    <li><code>GET /api/v1/users/web_profile_info/?username=...</code> — info de perfis</li>
+    <li><code>GET /api/v1/friendships/{id}/followers/</code> — lista de seguidores</li>
+    <li><code>GET /api/v1/friendships/{id}/following/</code> — lista de seguindo</li>
+    <li><code>POST /api/v1/friendships/create/{id}/</code> — segue um usuário (quando você usa a Fila)</li>
+    <li><code>POST /api/v1/friendships/destroy/{id}/</code> — deixa de seguir (se você usar)</li>
+    <li><code>GET /api/v1/media/{id}/likers/</code>, <code>/comments/</code> — curtidores/comentadores (experimental)</li>
+    <li><code>POST /api/v1/feed/tag/{tag}/sections/</code> — hashtags (experimental)</li>
+  </ul>
+  <p><strong>Importante:</strong> estas requisições são feitas no seu navegador, com seus cookies, exatamente como o site oficial do Instagram faria. Não enviamos nada disso para a uPaiva.</p>
+
+  <h3>2. Backend uPaiva (Railway)</h3>
+  <p>URL: <code>https://beautiful-laughter-production-ba79.up.railway.app</code></p>
+  <p>A extensão se comunica com o backend uPaiva apenas para:</p>
+  <ul>
+    <li>Gerar PIX de compra (envia: e-mail, plano, device ID, app ID)</li>
+    <li>Verificar status do PIX (<code>appId=instagrowth</code>)</li>
+    <li>Ativar license key (envia: e-mail, key, device ID, app ID)</li>
+    <li>Validar status da licença a cada 24h</li>
+    <li>Recuperar acesso por código de 6 dígitos</li>
+    <li>Listar planos disponíveis</li>
+    <li>(Auto Pleno) Registrar aceite do termo para auditoria legal</li>
+  </ul>
+  <p><strong>O backend nunca recebe:</strong> sua chave de IA, perfis capturados, fila, histórico de follows, prompts gerados.</p>
+
+  <h3>3. Provedor de IA (Anthropic / OpenAI / Google)</h3>
+  <p>Se você configurar o Growth Coach IA ou o Prompt Studio com sua própria chave (BYOK), a extensão envia diretamente para o provedor que você escolheu:</p>
+  <ul>
+    <li><code>https://api.anthropic.com/v1/messages</code> (Claude)</li>
+    <li><code>https://api.openai.com/v1/chat/completions</code> (OpenAI)</li>
+    <li><code>https://generativelanguage.googleapis.com/v1beta/...</code> (Gemini)</li>
+  </ul>
+  <p>Cada requisição contém: prompt, contexto do nicho (se você configurou), e a chave que você forneceu. <strong>Nada disso passa pelos servidores da uPaiva.</strong></p>
+
+  <h2>Cookies</h2>
+  <p>A extensão lê alguns cookies do Instagram apenas no contexto do <code>instagram.com</code>:</p>
+  <ul>
+    <li><code>ds_user_id</code> — para identificar seu ID de usuário logado</li>
+    <li><code>csrftoken</code> — para enviar nos headers das requisições</li>
+  </ul>
+  <p>Esses cookies são lidos no seu navegador e usados nas requisições à API do Instagram. <strong>Não enviamos cookies para nossos servidores.</strong></p>
+
+  <h2>Termo de Aceite do Auto Pleno</h2>
+  <p>Quando você habilita o modo Auto Pleno, registramos localmente (e enviamos ao backend uPaiva para auditoria legal):</p>
+  <ul>
+    <li>Timestamp do aceite</li>
+    <li>Device ID</li>
+    <li>Versão do termo aceito</li>
+    <li>Hash SHA-256 do texto integral do termo</li>
+    <li>User-Agent</li>
+  </ul>
+  <p>Isso é uma proteção legal mútua: você comprova que entendeu os riscos, e a uPaiva comprova que avisou.</p>
+
+  <h2>Seus direitos</h2>
+  <ul>
+    <li><strong>Apagar todos os dados:</strong> Configurações → "Limpar todos os dados". Apaga tudo do <code>chrome.storage.local</code> e desativa Premium neste navegador.</li>
+    <li><strong>Apagar dados específicos:</strong> você pode remover perfis capturados, itens da fila ou do histórico individualmente.</li>
+    <li><strong>Solicitar exclusão de dados do backend:</strong> envie e-mail para o endereço informado em <a href="https://upaiva.dev" target="_blank" rel="noopener">upaiva.dev</a>. Removemos seu device ID, e-mail de compra e registro de aceite do termo (sem afetar registros contábeis exigidos por lei).</li>
+  </ul>
+
+  <h2>Não somos afiliados ao Instagram</h2>
+  <p>A InstaGrowth IA uPaiva <strong>não é afiliada, endossada ou patrocinada pela Meta Platforms, Inc. ou pelo Instagram</strong>. Esta extensão é fornecida "como está" (as-is), sem garantias.</p>
+
+  <h2>Alterações</h2>
+  <p>Atualizaremos este documento conforme necessário. A data no topo indica a última revisão.</p>
+
+  <footer>
+    Para dúvidas: <a href="https://upaiva.dev" target="_blank" rel="noopener">upaiva.dev</a>
+  </footer>
+
+</div>
+</body>
+</html>

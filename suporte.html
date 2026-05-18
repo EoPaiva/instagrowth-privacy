@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Página de suporte da extensão InstaGrowth IA uPaiva — FAQ, contato, reportar bugs e solicitar exclusão de dados.">
+<meta name="robots" content="index, follow">
+<title>Suporte — InstaGrowth IA uPaiva</title>
+<link rel="canonical" href="">
+<style>
+  :root {
+    --bg-base: #080A12;
+    --bg-surface: #0D1020;
+    --bg-card: #12172A;
+    --bg-elevated: #171D33;
+    --border-subtle: #252B45;
+    --color-blue: #3B82F6;
+    --color-purple: #8B5CF6;
+    --color-green: #22C55E;
+    --color-warning: #FACC15;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #64748B;
+    --gradient-primary: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 45%, #22C55E 100%);
+    --glow-purple: 0 0 24px rgba(139, 92, 246, 0.35);
+    --glow-green: 0 0 24px rgba(34, 197, 94, 0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    line-height: 1.65;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 12px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 40px 0 12px;
+    color: var(--text-primary);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  h3 {
+    font-size: 16px;
+    margin: 24px 0 8px;
+    color: var(--color-blue);
+  }
+  p { margin: 12px 0; color: var(--text-secondary); }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; color: var(--text-secondary); }
+  strong { color: var(--text-primary); font-weight: 600; }
+  a { color: var(--color-purple); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    color: var(--text-primary);
+  }
+  /* Contact hero card */
+  .contact-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(34, 197, 94, 0.08));
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 16px;
+    padding: 32px;
+    margin: 24px 0 40px;
+    box-shadow: var(--glow-purple);
+    text-align: center;
+  }
+  .contact-card h2 {
+    margin: 0 0 8px;
+    border: none;
+    padding: 0;
+    color: var(--text-primary);
+    font-size: 20px;
+  }
+  .contact-card p { margin: 8px 0 16px; }
+  .email-btn {
+    display: inline-block;
+    background: var(--gradient-primary);
+    color: #080A12 !important;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none !important;
+    box-shadow: var(--glow-purple);
+    letter-spacing: 0.3px;
+  }
+  .email-btn:hover { transform: translateY(-1px); }
+
+  /* Response time pill */
+  .response-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    color: var(--color-green);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 8px;
+  }
+  .response-pill::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-green);
+    box-shadow: var(--glow-green);
+  }
+
+  /* FAQ */
+  .faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 12px 0;
+  }
+  .faq-item summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--text-primary);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    color: var(--color-purple);
+    font-size: 20px;
+    font-weight: 700;
+    transition: transform 0.2s;
+  }
+  .faq-item[open] summary::after {
+    content: "−";
+  }
+  .faq-item .answer {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .faq-item .answer p:first-child { margin-top: 0; }
+  .faq-item .answer p:last-child { margin-bottom: 0; }
+
+  /* Email template */
+  .email-template {
+    background: var(--bg-card);
+    border: 1px dashed var(--border-subtle);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0;
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+    white-space: pre-wrap;
+    line-height: 1.5;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  .nav-links {
+    text-align: center;
+    margin-top: 12px;
+  }
+  .nav-links a {
+    margin: 0 12px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <span class="badge">InstaGrowth IA uPaiva</span>
+    <h1>Suporte</h1>
+    <p class="meta">Tira dúvidas, reporta bugs e solicita exclusão de dados</p>
+  </header>
+
+  <div class="contact-card">
+    <h2>Fale com a gente</h2>
+    <p>Suporte por e-mail. Resposta direta, sem chatbot.</p>
+    <a class="email-btn" href="mailto:suporte@upaiva.dev?subject=Suporte%20InstaGrowth%20IA">suporte@upaiva.dev</a>
+    <div><span class="response-pill">Resposta em até 2 dias úteis</span></div>
+  </div>
+
+  <h2>Perguntas frequentes</h2>
+
+  <details class="faq-item">
+    <summary>Como instalo a extensão?</summary>
+    <div class="answer">
+      <p>Pela <strong>Chrome Web Store</strong>: busca por "InstaGrowth IA uPaiva" e clica em "Usar no Chrome". Pronto — o ícone "iG" aparece na barra do navegador.</p>
+      <p>A versão completa (com automação avançada) é distribuída separadamente via instalação sem compactação — fala com o suporte se precisar.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Não preciso digitar minha senha do Instagram?</summary>
+    <div class="answer">
+      <p><strong>Correto, a extensão NUNCA pede sua senha.</strong> Ela funciona dentro da sessão já logada do navegador, usando os cookies da sua aba do Instagram. Se você desloga do Instagram, a extensão simplesmente para de funcionar até logar de novo.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Onde meus dados ficam armazenados?</summary>
+    <div class="answer">
+      <p>Quase tudo fica no <strong>seu navegador</strong> (<code>chrome.storage.local</code>): perfis capturados, fila, histórico de seguidos, configurações, hashtags testadas, prompts gerados.</p>
+      <p>Apenas dados mínimos do pagamento PIX e da ativação da licença Premium são enviados ao backend uPaiva. Detalhes completos em <a href="privacidade.html">privacidade.html</a>.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>O que é BYOK e por que minha chave de IA fica segura?</summary>
+    <div class="answer">
+      <p><strong>BYOK</strong> = "Bring Your Own Key". Você cola sua própria chave de API do provedor de IA (Anthropic Claude, OpenAI ou Google Gemini) e a extensão envia requisições <strong>direto do seu navegador</strong> pro provedor — sem passar pelos nossos servidores.</p>
+      <p>A chave fica armazenada localmente com obfuscação leve (XOR + base64). Recomendamos restringir a chave por uso/IP no painel do provedor pra reduzir risco.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Posso usar a extensão em mais de um computador?</summary>
+    <div class="answer">
+      <p>Sim, instalando a extensão em cada navegador. Sua license key Premium fica vinculada ao <strong>primeiro</strong> dispositivo onde for ativada (por device ID).</p>
+      <p>Pra recuperar acesso em outro dispositivo: use a opção "Recuperar acesso" no popup → informa seu e-mail de compra → recebe código de 6 dígitos no e-mail → ativa.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Como funciona o reembolso?</summary>
+    <div class="answer">
+      <p>Você tem <strong>7 dias de arrependimento</strong> a partir da compra, conforme o CDC Art. 49. Pra solicitar:</p>
+      <p>Envie e-mail pra <a href="mailto:suporte@upaiva.dev?subject=Arrependimento%20-%20Reembolso">suporte@upaiva.dev</a> com assunto "Arrependimento" informando o e-mail da compra e a license key. Reembolsamos integralmente via PIX em até 7 dias úteis.</p>
+      <p>Após 7 dias, casos de falha grave da Extensão atribuível à uPaiva são analisados individualmente.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>O Instagram pode bloquear minha conta por usar a extensão?</summary>
+    <div class="answer">
+      <p>A versão da Chrome Web Store oferece <strong>apenas ferramentas de descoberta e organização</strong>, sem automação de follow agressiva — risco mínimo.</p>
+      <p>Se você usa a versão completa com automação assistida nos modos Conservador ou Moderado, o risco também é baixo porque a extensão usa <strong>timing humano aleatório</strong>, pausas longas e detector de shadow ban.</p>
+      <p>O modo "Auto Pleno" (sem teto, exige aceite de termo específico) tem <strong>risco real</strong> de action block ou banimento, mesmo com cuidados. Você assume a responsabilidade ao habilitá-lo.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Como apago todos os meus dados?</summary>
+    <div class="answer">
+      <p>No popup da extensão, vai em <strong>Configurações → "Limpar todos os dados"</strong>. Isso apaga tudo do <code>chrome.storage.local</code> e desativa o Premium nesse navegador.</p>
+      <p>Pra remover também o registro no backend uPaiva (device ID, e-mail, registro de aceite de termo), envie e-mail pra <a href="mailto:suporte@upaiva.dev?subject=Exclus%C3%A3o%20de%20dados">suporte@upaiva.dev</a> com assunto "Exclusão de dados".</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>A extensão funciona em Edge, Brave, Opera?</summary>
+    <div class="answer">
+      <p>Sim, em qualquer navegador baseado em Chromium que suporte Chrome Extensions Manifest V3. A loja oficial é a Chrome Web Store; em outros navegadores você instala a partir da loja deles (que normalmente sincroniza com a Chrome Web Store) ou via sideload manual.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>A extensão é afiliada ao Instagram?</summary>
+    <div class="answer">
+      <p><strong>Não.</strong> A InstaGrowth IA uPaiva é um produto independente da uPaiva e não tem qualquer afiliação, endosso ou patrocínio da Meta Platforms, Inc. ou do Instagram.</p>
+    </div>
+  </details>
+
+  <h2>Reportar bug</h2>
+  <p>Encontrou algo errado? Mande e-mail pra <a href="mailto:suporte@upaiva.dev?subject=Bug%20Report%20-%20InstaGrowth">suporte@upaiva.dev</a> com o modelo abaixo:</p>
+  <div class="email-template">Assunto: Bug Report — [breve descrição]
+
+Versão da extensão: (vai em Configurações no popup)
+Navegador: (Chrome / Edge / Brave / outro) — versão
+Sistema operacional: (Windows / macOS / Linux)
+Plano: (Free / Premium)
+
+O que você fez:
+1. ...
+2. ...
+
+O que esperava acontecer:
+...
+
+O que aconteceu na verdade:
+...
+
+Console de erros (F12 na aba do Instagram, aba Console):
+...
+
+(Anexe screenshots se possível)</div>
+
+  <h2>Solicitar exclusão de dados</h2>
+  <p>Conforme a LGPD, você pode solicitar a exclusão de todos os seus dados a qualquer momento. Envie e-mail com o modelo:</p>
+  <div class="email-template">Assunto: Exclusão de dados — InstaGrowth IA
+
+Solicito a exclusão completa dos meus dados na uPaiva,
+incluindo: device ID, e-mail de compra e registros de
+aceite de termo (Auto Pleno, se aplicável).
+
+E-mail de compra: ___________
+License key: ___________
+Plano: ___________</div>
+  <p>Processamos em até 7 dias úteis. Registros contábeis exigidos por lei (notas fiscais, comprovantes de pagamento) são preservados pelo prazo legal.</p>
+
+  <h2>Outros canais</h2>
+  <ul>
+    <li><strong>Site oficial:</strong> <a href="https://upaiva.dev" target="_blank" rel="noopener">upaiva.dev</a></li>
+    <li><strong>Política de Privacidade:</strong> <a href="privacidade.html">privacidade.html</a></li>
+    <li><strong>Termos de Uso:</strong> <a href="termos.html">termos.html</a></li>
+  </ul>
+
+  <footer>
+    <div class="nav-links">
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+      <a href="https://upaiva.dev" target="_blank" rel="noopener">upaiva.dev</a>
+    </div>
+    <p style="margin-top: 16px;">© 2026 uPaiva. Todos os direitos reservados.</p>
+  </footer>
+
+</div>
+</body>
+</html>
